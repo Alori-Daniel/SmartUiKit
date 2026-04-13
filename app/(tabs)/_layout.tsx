@@ -3,10 +3,13 @@ import { fonts } from "@/constants/fonts";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
+import { KeyboardController } from "react-native-keyboard-controller";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function TabLayout() {
   const insets = useSafeAreaInsets();
+  KeyboardController.preload();
+
   return (
     <Tabs
       screenOptions={{

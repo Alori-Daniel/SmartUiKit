@@ -3,6 +3,8 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { KeyboardProvider } from "react-native-keyboard-controller";
+
 import "react-native-reanimated";
 
 export {
@@ -49,16 +51,18 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen
-        name="settings"
-        options={{
-          headerShown: false,
-          animation: "fade_from_bottom",
-          animationDuration: 300,
-        }}
-      />
-    </Stack>
+    <KeyboardProvider preload={false}>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="settings"
+          options={{
+            headerShown: false,
+            animation: "fade_from_bottom",
+            animationDuration: 300,
+          }}
+        />
+      </Stack>
+    </KeyboardProvider>
   );
 }
