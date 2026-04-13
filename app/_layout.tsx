@@ -20,6 +20,11 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
+    "Manrope-Regular": require("../assets/fonts/Manrope-Regular.ttf"),
+    "Manrope-Medium": require("../assets/fonts/Manrope-Medium.ttf"),
+    "Manrope-SemiBold": require("../assets/fonts/Manrope-SemiBold.ttf"),
+    "Manrope-Bold": require("../assets/fonts/Manrope-Bold.ttf"),
+    "Manrope-ExtraBold": require("../assets/fonts/Manrope-ExtraBold.ttf"),
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
     ...FontAwesome.font,
   });
@@ -46,6 +51,14 @@ function RootLayoutNav() {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="settings"
+        options={{
+          headerShown: false,
+          animation: "fade_from_bottom",
+          animationDuration: 300,
+        }}
+      />
     </Stack>
   );
 }

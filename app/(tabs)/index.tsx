@@ -1,14 +1,6 @@
+import ConverterScreen from "@/components/ConverterScreen";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
 
-const index = () => {
-  return (
-    <View>
-      <Text>index</Text>
-    </View>
-  );
-};
+const index = () => <ConverterScreen categoryId="length" />;
 
 export default index;
-
-const styles = StyleSheet.create({});

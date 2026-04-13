@@ -1,14 +1,6 @@
+import ConverterScreen from "@/components/ConverterScreen";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
 
-const currency = () => {
-  return (
-    <View>
-      <Text>currency</Text>
-    </View>
-  );
-};
+const currency = () => <ConverterScreen categoryId="currency" />;
 
 export default currency;
-
-const styles = StyleSheet.create({});

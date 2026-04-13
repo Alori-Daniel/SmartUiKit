@@ -1,4 +1,5 @@
 import CustomHeader from "@/components/CustomHeader";
+import { fonts } from "@/constants/fonts";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
@@ -15,13 +16,15 @@ export default function TabLayout() {
         tabBarStyle: {
           height: 84,
           paddingTop: 8,
+          paddingHorizontal: 8,
           paddingBottom: insets.bottom + 15,
           backgroundColor: "#FFFDF8",
           borderTopColor: "#E9E0D2",
         },
         tabBarLabelStyle: {
           fontSize: 12,
-          fontWeight: "700",
+          lineHeight: 16,
+          fontFamily: fonts.bold,
         },
       }}
     >
@@ -39,7 +42,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="temp"
         options={{
-          title: "Temperature",
+          title: "Temp",
           tabBarIcon: ({ color }) => (
             <Ionicons name="thermometer" size={24} color={color} />
           ),
