@@ -16,7 +16,7 @@ const toolkitHighlights = [
   {
     icon: "sparkles-outline" as const,
     title: "Focused",
-    copy: "Only the four everyday tools you actually need.",
+    copy: "Converters and a simple checklist stay in one clean space.",
   },
   {
     icon: "cloud-offline-outline" as const,
@@ -54,8 +54,8 @@ export default function SettingsScreen() {
 
           <Text style={styles.heroTitle}>Simple tools, sharp results.</Text>
           <Text style={styles.heroCopy}>
-            This toolkit keeps your everyday conversions clean, fast, and easy
-            to trust.
+            This toolkit keeps your everyday conversions and quick tasks clean,
+            fast, and easy to trust.
           </Text>
         </View>
 

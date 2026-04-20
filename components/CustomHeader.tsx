@@ -4,7 +4,7 @@ import { router } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-const CustomHeader = () => {
+const CustomHeader = ({ title }: { title?: string }) => {
   const insets = useSafeAreaInsets();
 
   return (
@@ -18,7 +18,7 @@ const CustomHeader = () => {
     >
       <View style={styles.brand}>
         {/* <Ionicons name="grid-outline" size={20} color="#0D5DB8" /> */}
-        <Text style={styles.sectionTitle}>Smart Kit</Text>
+        <Text style={styles.sectionTitle}>{title || "Smart Kit"}</Text>
       </View>
 
       <TouchableOpacity

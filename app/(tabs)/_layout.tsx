@@ -76,6 +76,17 @@ export default function TabLayout() {
           header: () => <CustomHeader />,
         }}
       />
+      <Tabs.Screen
+        name="tasks"
+        options={{
+          title: "Tasks",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="checkmark-done-outline" size={24} color={color} />
+          ),
+          headerShown: true,
+          header: () => <CustomHeader title="Todo-List" />,
+        }}
+      />
     </Tabs>
   );
 }
